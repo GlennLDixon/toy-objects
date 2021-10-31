@@ -37,3 +37,7 @@ const toys = [
         category: "Board"
     }
 ]
+
+for (const toy of toys) {
+    console.log(`I want this ${toy.name} toy`)
+}
