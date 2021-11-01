@@ -26,7 +26,7 @@ const toys = [
     {
         id: 3,
         name: "Monopoly",
-        brand: "Hansbro Gaming",
+        brand: "Hasbro Gaming",
         inStock: false,
         quantity: 0,
         price: 15.97,
@@ -38,6 +38,33 @@ const toys = [
     }
 ]
 
+const whatDoYouMeme = {
+    id: 4,
+    name: "What Do You Meme",
+    brand: "What Do You Meme",
+    inStock: true,
+    quantity: 3,
+    price: 29.99,
+    age: "Adult",
+    players: 3 + "+",
+    category: "Card"
+}
+
+const bopIt = {
+    id: 3,
+    name: "Bop It",
+    brand: "Hasbro Gaming",
+    inStock: false,
+    quantity: 5,
+    price: 14.92,
+    minAge: 8 + "+",
+    players: 2,
+    category: "Strategy"
+}
+
+toys.push(whatDoYouMeme)
+toys.push(bopIt)
+
 for (const toy of toys) {
-    console.log(`I want this ${toy.name} toy`)
+    console.log(`Lets play ${toy.name}`)
 }
