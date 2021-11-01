@@ -66,5 +66,5 @@ toys.push(whatDoYouMeme)
 toys.push(bopIt)
 
 for (const toy of toys) {
-    console.log(`Lets play ${toy.name}`)
+    console.log(`There is ${toy.quantity} ${toy.name} in stock for the price of ${toy.price}`)
 }
