@@ -66,5 +66,9 @@ toys.push(whatDoYouMeme)
 toys.push(bopIt)
 
 for (const toy of toys) {
-    console.log(`There is ${toy.quantity} ${toy.name} in stock for the price of ${toy.price}`)
+    if (toy.quantity > 0) {
+        console.log(`There is ${toy.quantity} ${toy.name} in stock for the price of ${toy.price}`)
+    } else {
+        console.log(`Sorry but ${toy.name} is currently out of stock`)
+    }
 }
