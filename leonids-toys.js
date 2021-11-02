@@ -62,16 +62,26 @@ const bopIt = {
     category: "Strategy"
 }
 
-toys.push(whatDoYouMeme)
-toys.push(bopIt)
+// const toyToFind = 2; 
+const addToyToInventory = (toyObject) => {
+    const lastIndex = toys.length - 1
+    const currentLastToy = toys[lastIndex]
+    const maxId = currentLastToy.id
+    const idForNewToy = maxId + 1
 
-const toyToFind = 2; 
+    toyObject.id = idForNewToy
+    toys.push(toyObject)
+}
+
+addToyToInventory(whatDoYouMeme)
+addToyToInventory(bopIt)
 
 for (const toy of toys) {
-    console.log(toy.price = toy.price * 0.5)
-    if(toy.id === toyToFind) {
-        console.log(`The ${toy.name} is ${toy.price}, we have ${toy.quantity} left instock`)
-    }
+    console.log(`The ${toy.name} is ${toy.price}, we have ${toy.quantity} left instock`)
+    // console.log(toy.price = toy.price * 0.5)
+    // if(toy.id === toyToFind) {
+    //     console.log(`The ${toy.name} is ${toy.price}, we have ${toy.quantity} left instock`)
+    // }
     // if (toy.quantity > 0) {
     //     console.log(`There is ${toy.quantity} ${toy.name} in stock for the price of ${toy.price}`)
     // } else {
