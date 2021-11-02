@@ -65,8 +65,13 @@ const bopIt = {
 toys.push(whatDoYouMeme)
 toys.push(bopIt)
 
+const toyToFind = 2; 
+
 for (const toy of toys) {
     console.log(toy.price = toy.price * 0.5)
+    if(toy.id === toyToFind) {
+        console.log(`The ${toy.name} is ${toy.price}, we have ${toy.quantity} left instock`)
+    }
     // if (toy.quantity > 0) {
     //     console.log(`There is ${toy.quantity} ${toy.name} in stock for the price of ${toy.price}`)
     // } else {
