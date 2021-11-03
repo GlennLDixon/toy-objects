@@ -39,7 +39,6 @@ const toys = [
 ]
 
 const whatDoYouMeme = {
-    id: 4,
     name: "What Do You Meme",
     brand: "What Do You Meme",
     inStock: true,
@@ -51,7 +50,6 @@ const whatDoYouMeme = {
 }
 
 const bopIt = {
-    id: 3,
     name: "Bop It",
     brand: "Hasbro Gaming",
     inStock: false,
@@ -63,12 +61,17 @@ const bopIt = {
 }
 
 // const toyToFind = 2; 
+
 const addToyToInventory = (toyObject) => {
     const lastIndex = toys.length - 1
+    // lastIndex is storing the amount of elements stored in the toys array which in this instance are objects
     const currentLastToy = toys[lastIndex]
+    // now we are storing the objects inside of the currentLastToy variable
     const maxId = currentLastToy.id
+    // with maxId we are not storing the id's of each object using dotNotation to access the objects that are now stored in the currentLastToy array.
     const idForNewToy = maxId + 1
-
+    // since we have the id's stored in maxId, we now create a new variable called idForNewToy that will store the id of the object but now are incrementing the id number by 1
+    
     toyObject.id = idForNewToy
     toys.push(toyObject)
 }
@@ -77,7 +80,7 @@ addToyToInventory(whatDoYouMeme)
 addToyToInventory(bopIt)
 
 for (const toy of toys) {
-    console.log(`The ${toy.name} is ${toy.price}, we have ${toy.quantity} left instock`)
+    // console.log(`The ${toy.name} is ${toy.price}, we have ${toy.quantity} left instock`)
     // console.log(toy.price = toy.price * 0.5)
     // if(toy.id === toyToFind) {
     //     console.log(`The ${toy.name} is ${toy.price}, we have ${toy.quantity} left instock`)
@@ -88,3 +91,5 @@ for (const toy of toys) {
     //     console.log(`Sorry but ${toy.name} is currently out of stock`)
     // }
 }
+
+// console.log(toys)
