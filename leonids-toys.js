@@ -60,7 +60,7 @@ const bopIt = {
     category: "Strategy"
 }
 
-// const toyToFind = 2; 
+const toyToFind = 2; 
 
 const addToyToInventory = (toyObject) => {
     const lastIndex = toys.length - 1
@@ -82,14 +82,14 @@ addToyToInventory(bopIt)
 for (const toy of toys) {
     // console.log(`The ${toy.name} is ${toy.price}, we have ${toy.quantity} left instock`)
     // console.log(toy.price = toy.price * 0.5)
-    // if(toy.id === toyToFind) {
-    //     console.log(`The ${toy.name} is ${toy.price}, we have ${toy.quantity} left instock`)
-    // }
-    // if (toy.quantity > 0) {
-    //     console.log(`There is ${toy.quantity} ${toy.name} in stock for the price of ${toy.price}`)
-    // } else {
-    //     console.log(`Sorry but ${toy.name} is currently out of stock`)
-    // }
+    if(toy.id === toyToFind) {
+        console.log(`The ${toy.name} is ${toy.price}, we have ${toy.quantity} left instock`)
+    }
+    if (toy.quantity > 0) {
+        console.log(`There is ${toy.quantity} ${toy.name} in stock for the price of ${toy.price}`)
+    } else {
+        console.log(`Sorry but ${toy.name} is currently out of stock`)
+    }
 }
 
 // console.log(toys)
